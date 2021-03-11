@@ -1,6 +1,1 @@
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Для запуска проекта в корневом каталоге выполнить команду npm run start, сервер запускается на порте 5000, клиент на 3000

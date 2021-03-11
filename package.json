@@ -1,38 +1,23 @@
 {
   "name": "travel-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.0"
-  },
+  "version": "1.0.0",
+  "description": "Для запуска проекта в корневом каталоге выполнить команду npm run start, сервер запускается на порте 5000, клиент на 3000",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"npm run start:dev --prefix server\" \"npm run start --prefix client\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Walleriy/travel-app.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Walleriy/travel-app/issues"
+  },
+  "homepage": "https://github.com/Walleriy/travel-app#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.0"
   }
 }
