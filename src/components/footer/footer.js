@@ -1,12 +1,15 @@
 import React from "react";
 import './footer.scss'
 import rsPhoto from './rs_logo.png'
+import {useTranslation} from "react-i18next";
 
 const Footer = () => {
+    const {t} = useTranslation('translations');
+
     return (
         <footer className="footer">
             <div className="footer__developers">
-                Developers:
+                {t('b')}
                 <ul>
                     <li>
                         <a
