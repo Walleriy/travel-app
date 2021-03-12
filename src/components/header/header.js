@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const Header = () => {
 
-    const {t} = useTranslation('ns');
+    const {t} = useTranslation('translations');
 
     return (
         <header className="header">

@@ -8,20 +8,31 @@ const SearchPanel = ({ onSearchInput }) => {
 
     useEffect(() => onSearchInput(term), [term])
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        changeTerm(e.target.value);
+    }
+
     return (
-        <form className="search_panel"
-        >
-            <input autoFocus type="text"
-                   placeholder="type to search"
-                   className='form-control search_panel__input'
-                   value={term}
-                   onChange={(e) => changeTerm(e.target.value)}
-            />
-            <img className="search_panel__img"
-                 src={cross} alt="cross"
-                 onClick={(e) => changeTerm('')}
-            />
-        </form>
+        <div className="search_panel">
+            <form id="search_panel" className="search_panel__form"
+            >
+                <input autoFocus type="text"
+                       placeholder="type to search"
+                       className='form-control search_panel__input'
+                       value={term}
+                       onChange={(e) => changeTerm(e.target.value)}
+                />
+                <img className="search_panel__img"
+                     src={cross} alt="cross"
+                     onClick={(e) => changeTerm('')}
+                />
+            </form>
+            <button type="submit"
+                    form="search_panel" className="search_panel__submit"
+                    onClick={onSubmit}
+            >Search</button>
+        </div>
     );
 }
 

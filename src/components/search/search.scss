@@ -1,12 +1,42 @@
 .search_panel {
-  position: relative;
   display: flex;
   margin-bottom: auto;
 
-  &__input {
-    padding-left: 7px;
+  &__form {
+    position: relative;
+    display: flex;
     width: 10%;
     flex-grow: 1;
+  }
+
+  &__submit {
+    outline: none;
+    padding: 8px;
+    max-width: 85px;
+    margin-left: 37px;
+    background: #FFFFFF;
+    border: 1px solid #EB5757;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #EB5757;
+    transition: all 10ms ease-out 10ms;
+
+    &:hover {
+      background: #EB5757;
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-left: 7px;
     margin-right: 3px;
     height: 2rem;
     outline: none;
@@ -15,7 +45,6 @@
 
   &__img {
     position: absolute;
-    top: 2px;
     right: 5px;
     height: 90% ;
   }
