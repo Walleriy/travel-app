@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__developers">
-                {t('b')}
+                {t('footer.developers')}
                 <ul>
                     <li>
                         <a

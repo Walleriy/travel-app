@@ -1,4 +1,9 @@
 {
-  "h1": "TNS",
-  "b": "Bye"
+  "header": {
+    "h1": "Header from ns namespace en",
+    "language": "ns"
+  },
+  "footer": {
+    "developers": "ns"
+  }
 }

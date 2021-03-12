@@ -1,4 +1,9 @@
 {
-  "h1": "Travel App",
-  "b": "Developers"
+  "header": {
+    "h1": "Travel App",
+    "language": "language"
+  },
+  "footer": {
+    "developers": "Developers"
+  }
 }

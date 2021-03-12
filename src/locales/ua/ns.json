@@ -1,4 +1,9 @@
 {
-  "h1": "TNS Ukr",
-  "b": "Bye"
+  "header": {
+    "h1": "Header from ns namespace ua",
+    "language": "ns"
+  },
+  "footer": {
+    "developers": "ns"
+  }
 }

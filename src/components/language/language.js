@@ -14,20 +14,24 @@ const Language = () => {
 
     useEffect(() => {
         i18n.changeLanguage(language);
-    }, [ language ]);
+    }, [i18n, language ]);
 
     return (
-        <select
-            className='language'
-            id='lang'
-            onChange={onLanguageChange}
-            value={language}
-        >
-            <option value='en'>English</option>
-            <option value='ru'>Русский</option>
-            <option value='ua'>Українська</option>
-            <option value='be'>Беларуская</option>
-        </select>
+        <div className="language">
+            <h4 className='language__label'>{t('header.language')}</h4>
+            <select
+
+                className='language__select'
+                id='lang'
+                onChange={onLanguageChange}
+                value={language}
+            >
+                <option value='en'>English</option>
+                <option value='ru'>Русский</option>
+                <option value='ua'>Українська</option>
+                <option value='be'>Беларуская</option>
+            </select>
+        </div>
     );
 }
 

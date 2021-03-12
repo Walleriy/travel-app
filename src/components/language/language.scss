@@ -1,7 +1,17 @@
 .language {
+    position: absolute;
+    right: 0;
+
+    &__label {
+        display: block;
+    }
+}
+
+.language__select {
     justify-self: flex-end;
     background: transparent;
     outline: none;
+
 
     option:checked {
         background: olive linear-gradient(olive, olive);
