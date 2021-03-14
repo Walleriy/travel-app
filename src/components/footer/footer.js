@@ -4,6 +4,7 @@ import rsPhoto from './rs_logo.png'
 import {useTranslation} from "react-i18next";
 
 const Footer = () => {
+
     const {t} = useTranslation('translations');
 
     return (

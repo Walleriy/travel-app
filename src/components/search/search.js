@@ -6,7 +6,7 @@ const SearchPanel = ({ onSearchInput }) => {
 
     const [term, changeTerm] = useState('');
 
-    useEffect(() => onSearchInput(term), [term])
+    useEffect(() => onSearchInput(term), [onSearchInput, term])
 
     const onSubmit = (e) => {
         e.preventDefault();

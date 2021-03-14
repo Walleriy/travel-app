@@ -3,13 +3,36 @@ import Header from "../header";
 import Footer from "../footer";
 import './app.scss'
 import SearchPanel from "../search/search";
-
+import Country from "../../pages/country";
+import Main from "../../pages/main";
 
 const App = () => {
 
-    const [page, setPage] = useState('main');
+    const images = [
+        {
+            original: 'https://picsum.photos/id/1018/1000/600/',
+            thumbnail: 'https://picsum.photos/id/1015/1000/600/',
+            originalTitle: 'Title One',
+            description: 'Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+        },
+        {
+            original: 'https://picsum.photos/id/1015/1000/600/',
+            thumbnail: 'https://picsum.photos/id/1015/250/150/',
+            originalTitle: 'Title Two',
+            description: 'Description Tho Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+        },
+        {
+            original: 'https://picsum.photos/id/1019/1000/600/',
+            thumbnail: 'https://picsum.photos/id/1019/250/150/',
+            originalTitle: 'Title Three',
+            description: 'Description Three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+        },
+    ];
 
-    const [term, setTerm] = useState('')
+
+    const [page, setPage] = useState(3);
+
+    const [, setTerm] = useState('')
 
     const SearchCountry = (term) => {
         setTerm(term);
@@ -30,31 +53,11 @@ const App = () => {
         })
     }
 
-    const Country = ({id, onChoosePage}) => {
-        return(
-            <div>
-                Country with id: {id}
-                <div onClick={() => onChoosePage('main')}>Press to go back to main</div>
-            </div>
-        )
-    }
-
-    const Main = ({onChoosePage}) => {
-        return (
-            <div>
-                Countries
-                <div onClick={() => onChoosePage(1)}>1</div>
-                <div onClick={() => onChoosePage(2)}>2</div>
-                <div onClick={() => onChoosePage(3)}>3</div>
-            </div>
-        )
-    };
-
     let domPage;
     if (page === 'main') {
         domPage = <Main onChoosePage={setPage}/>
     } else { //page або 'main' або цифра
-        domPage = <Country id={page} onChoosePage={setPage}/>
+        domPage = <Country id={page} onChoosePage={setPage} images={images} />
     }
 
     return (

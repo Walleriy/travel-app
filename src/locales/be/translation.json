@@ -5,5 +5,11 @@
   },
   "footer": {
     "developers": "Распрацоўшчыкі"
+  },
+  "gallery": {
+    "title": "Фотагалерэя"
+  },
+  "video-player": {
+    "title": "Відэапрайгравальнік"
   }
 }
