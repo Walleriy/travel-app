@@ -4,6 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import 'normalize.css';
+import './i18n';
 
 ReactDOM.render(
   <React.StrictMode>

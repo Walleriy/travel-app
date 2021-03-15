@@ -1,0 +1,18 @@
+{
+  "header": {
+    "h1": "Travel App",
+    "language": "language"
+  },
+  "footer": {
+    "developers": "Developers"
+  },
+  "gallery": {
+    "title": "Photo gallery"
+  },
+  "video-player": {
+    "title": "Video player"
+  },
+  "main": {
+    "notFound": "Nothing found. Try to type another name"
+  }
+}

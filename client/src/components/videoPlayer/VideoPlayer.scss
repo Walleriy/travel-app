@@ -1,0 +1,10 @@
+.video-player {
+    &__title {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    iframe {
+        object-fit: fill;
+    }
+}

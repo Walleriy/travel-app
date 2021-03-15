@@ -1,0 +1,50 @@
+.search_panel {
+    display: flex;
+
+    &__form {
+        position: relative;
+        display: flex;
+        width: 10%;
+        flex-grow: 1;
+    }
+
+    &__submit {
+        outline: none;
+        padding: 8px;
+        max-width: 85px;
+        margin-left: 37px;
+        background: #ffffff;
+        border: 1px solid #eb5757;
+        border-radius: 5px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #eb5757;
+        transition: all 10ms ease-out 10ms;
+
+        &:hover {
+            background: #eb5757;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding-left: 7px;
+        margin-right: 3px;
+        height: 2rem;
+        outline: none;
+        font-size: 1.5rem;
+    }
+
+    &__img {
+        position: absolute;
+        right: 5px;
+        height: 90%;
+    }
+}
