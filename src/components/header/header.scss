@@ -3,9 +3,17 @@
     display: flex;
     align-items: center;
     position: relative;
-}
 
-.header__title {
-    margin: auto;
-    justify-self: center;
+    &__logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        height: 80px;
+        width: 80px;
+    }
+
+    &__title {
+        margin: auto;
+        justify-self: center;
+    }
 }

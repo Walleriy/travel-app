@@ -30,7 +30,7 @@ const SearchPanel = ({ onSearchInput }) => {
             </form>
             <button type="submit"
                     form="search_panel" className="search_panel__submit"
-                    onClick={onSubmit}
+                    onClick={(e) => {e.preventDefault()}}
             >Search</button>
         </div>
     );

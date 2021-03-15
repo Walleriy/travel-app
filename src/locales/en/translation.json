@@ -11,5 +11,8 @@
   },
   "video-player": {
     "title": "Video player"
+  },
+  "main": {
+    "notFound": "Nothing found. Try to type another name"
   }
 }

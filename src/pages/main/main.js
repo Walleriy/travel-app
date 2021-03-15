@@ -1,31 +1,55 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './main.scss'
 import SearchPanel from "../../components/search/search";
 import {Link} from "react-router-dom";
 import CountryItem from "../../components/country-item";
+import { useTranslation } from "react-i18next";
 
-const Main = ({SearchCountry, Countries}) => {
+const Main = ({ Countries }) => {
 
-    const renderCountries = ( countries ) => {
+    const {t} = useTranslation('translations');
+    const [term, setTerm] = useState('');
 
-        return countries.map(({ name, capital, photoUrl }) => {
-            return <CountryItem name={name} capital={capital} photoUrl={photoUrl }/>
-        })
+    const SearchCountry = (term) => {
+        setTerm(term);
     }
 
-    const CountryList = () => {
-        const items = renderCountries(Countries);
-        return <div className="main__country-list">{items}</div>
+    const updateVisibleCountries = () => {
+
+        let countries;
+        if (term.length === 0) {
+            countries = Countries;
+        } else {
+            countries = Countries.filter(({name}) => {
+                return name.toLowerCase()
+                    .indexOf(term.toLowerCase()) > -1;
+            })
+        }
+
+        return renderCountries(countries);
     }
+
+    const renderCountries = (countries) => {
+
+        if (countries.length === 0) {
+            return <div>{t('main.notFound')}</div>
+        } else {
+            return countries.map(({name, capital, photoUrl}) => {
+                return (
+                    <Link to={`/country/${name}`}>
+                        <CountryItem name={name} capital={capital} photoUrl={photoUrl}/>
+                    </Link>
+                )
+            });
+        }
+    }
+
+    const visibleCountries = updateVisibleCountries();
 
     return (
-        <div>
+        <div className="main">
             <SearchPanel onSearchInput={SearchCountry}/>
-            <CountryList />
-            Countries
-            <Link to="/country/1">1</Link>
-            <Link to="/country/2">2</Link>
-            <Link to="/country/3">3</Link>
+            <div className="main__country-list">{visibleCountries}</div>
         </div>
     )
 };
