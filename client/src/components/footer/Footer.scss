@@ -1,0 +1,25 @@
+.footer {
+    flex: 0 0 100px;
+    background: yellowgreen;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+
+    div {
+        flex-basis: 33.33%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    &__img {
+        max-height: 90px;
+        width: auto;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}

@@ -4,7 +4,8 @@
   "description": "Для запуска проекта в корневом каталоге выполнить команду npm run start, сервер запускается на порте 5000, клиент на 3000",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run start:dev --prefix server\" \"npm run start --prefix client\""
+    "start": "concurrently \"npm run start:dev --prefix server\" \"npm run start --prefix client\"",
+    "inst": "concurrently \"npm install --prefix server\" \"npm install --prefix client\""
   },
   "repository": {
     "type": "git",
