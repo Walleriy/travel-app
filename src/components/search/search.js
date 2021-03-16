@@ -8,11 +8,6 @@ const SearchPanel = ({ onSearchInput }) => {
 
     useEffect(() => onSearchInput(term), [onSearchInput, term])
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        changeTerm(e.target.value);
-    }
-
     return (
         <div className="search_panel">
             <form id="search_panel" className="search_panel__form"
