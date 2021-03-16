@@ -18,6 +18,7 @@
   "weather": {
     "temperature": "Temperature: ",
     "humidity": "Humidity: ",
-    "wind": "Wind speed: "
+    "wind": "Wind speed: ",
+    "notFound": "City not found!"
   }
 }

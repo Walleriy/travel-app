@@ -16,7 +16,7 @@ const Weather = ({city}) => {
             const result = await fetch(url);
             const data = await result.json();
             if (data['message'] === 'city not found') {
-                setWeatherData('Місто не знайдено!');
+                setWeatherData(t('weather.notFound'));
             } else {
                 let res = {};
                 res.weatherIconClassName = `weather-icon owf owf-${data.weather[0].id}`;
