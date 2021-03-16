@@ -1,5 +1,21 @@
 .country{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  &__article {
+    flex-basis: 80%;
+  }
+
+  &__aside {
+    flex-basis: 20%;
+  }
+
   &__description {
+    text-align: center;
+  }
+
+  &__notFound {
     text-align: center;
   }
 }

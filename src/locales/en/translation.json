@@ -14,5 +14,10 @@
   },
   "main": {
     "notFound": "Nothing found. Try to type another name"
+  },
+  "weather": {
+    "temperature": "Temperature: ",
+    "humidity": "Humidity: ",
+    "wind": "Wind speed: "
   }
 }
