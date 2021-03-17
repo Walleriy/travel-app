@@ -5,6 +5,7 @@ import { Footer } from '../../components/footer/Footer';
 import { Header } from '../../components/header/Header';
 import { SightGallery } from '../../components/sightGallery/SightGallery';
 import { VideoPlayer } from '../../components/videoPlayer/VideoPlayer';
+import { Weather } from '../../components/weather/Weather';
 import { useHttp } from '../../hooks/useHttp';
 
 export const CountryPage = () => {
@@ -32,6 +33,7 @@ export const CountryPage = () => {
         <div>
           <CountryItem country={country} />
           <div className="description">{country.description}</div>
+          <Weather city={country.capital} />
           <SightGallery country={country} />
           <VideoPlayer url={country.videoUrl} />
         </div>

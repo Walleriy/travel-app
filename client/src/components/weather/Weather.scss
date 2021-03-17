@@ -1,0 +1,44 @@
+@import "owfont-regular.css";
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    background: rgba(200, 200, 200, 0.5);
+    border-radius: 25px;
+    text-align: center;
+
+    .text-information {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .city {
+        border-radius: 25px;
+        padding: 5px 0;
+        font-size: 20px;
+    }
+
+    .temperature,
+    .humidity,
+    .wind,
+    .error {
+        font-size: 22px;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    .weather-icon {
+        font-size: 100px;
+        color: aliceblue;
+
+        &:hover {
+            animation: shake 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 5rem;
+        }
+    }
+}
