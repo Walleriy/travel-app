@@ -5,12 +5,12 @@ import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/footer/Footer';
 import { Search } from '../../components/search/Search';
 
-export const MainPage = () => {
+export const MainPage = ({ lang, setLang }) => {
   return (
     <div>
-      <Header />
+      <Header lang={lang} setLang={setLang} />
       <Search />
-      <Gallery />
+      <Gallery lang={lang} />
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import './CountryItem.scss';
 
 export const CountryItem = ({ country }) => {
+  console.log(country);
   return (
     <div className="country-item">
       <h3 className="country-item__title">{country.name}</h3>
