@@ -1,0 +1,29 @@
+.container {
+    width: 20%;
+    border: 1px solid black;
+    margin-bottom: 25px;
+
+    & a {
+        text-decoration: none;
+        display: block;
+    }
+
+    & .card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+    }
+}

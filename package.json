@@ -1,0 +1,24 @@
+{
+  "name": "travel-app",
+  "version": "1.0.0",
+  "description": "Для запуска проекта в корневом каталоге выполнить команду npm run start, сервер запускается на порте 5000, клиент на 3000",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:dev --prefix server\" \"npm run start --prefix client\"",
+    "inst": "concurrently \"npm install --prefix server\" \"npm install --prefix client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Walleriy/travel-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Walleriy/travel-app/issues"
+  },
+  "homepage": "https://github.com/Walleriy/travel-app#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
