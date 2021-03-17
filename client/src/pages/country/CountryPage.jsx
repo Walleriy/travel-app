@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect, useLocation, useParams } from 'react-router';
+import { Redirect, useParams } from 'react-router';
 import { CountryItem } from '../../components/countryItem/CountryItem';
 import { Footer } from '../../components/footer/Footer';
 import { Header } from '../../components/header/Header';
+import { Map } from '../../components/map/Map';
 import { SightGallery } from '../../components/sightGallery/SightGallery';
 import { VideoPlayer } from '../../components/videoPlayer/VideoPlayer';
 import { Weather } from '../../components/weather/Weather';
@@ -34,6 +35,7 @@ export const CountryPage = () => {
           <CountryItem country={country} />
           <div className="description">{country.description}</div>
           <Weather city={country.capital} />
+          <Map coordinate={country.capitalLocation} />
           <SightGallery country={country} />
           <VideoPlayer url={country.videoUrl} />
         </div>
