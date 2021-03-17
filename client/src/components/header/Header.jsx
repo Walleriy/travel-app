@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import logo from './logo.png';
 import './Header.scss';
 
-export const Header = () => {
+export const Header = ({ lang, setLang }) => {
   const { t } = useTranslation('translations');
+
+  console.log('head lang: ' + lang);
 
   return (
     <header className="header">
@@ -14,7 +16,7 @@ export const Header = () => {
         <img src={logo} alt="logo" className="header__logo"></img>
       </Link>
       <h1 className="header__title">{t('header.h1')}</h1>
-      <Language />
+      <Language lang={lang} setLang={setLang} />
     </header>
   );
 };

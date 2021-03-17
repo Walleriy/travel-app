@@ -3,11 +3,10 @@ import { useCallback, useState } from 'react'
 export const useHttp = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-    const request = useCallback(async (url, method = 'GET', body = null, headers = {}, lang = 'ru') => {
+    const request = useCallback(async (url, method = 'GET', body = null, headers = {}) => {
         setLoading(true);
-        const fullUrl = `${url}?lang=${lang}`;
         try {
-            const response = await fetch(fullUrl, {
+            const response = await fetch(url, {
                 method,
                 body,
                 headers
