@@ -5,6 +5,7 @@ import MyGallery from "../../components/gallery";
 import VideoPlayer from "../../components/video-player";
 import CountryItem from "../../components/country-item";
 import Weather from "../../components/weather";
+import Map from "../../components/map";
 
 const Country = ({name, countries}) => {
 
@@ -25,6 +26,7 @@ const Country = ({name, countries}) => {
                     <div className="country__description">{country.description}</div>
                     <MyGallery images={country.images}/>
                     <VideoPlayer url={'https://youtu.be/TBQurAxh2hA'}/>
+                    <Map coordinates={[50.496, 41.98]}/>
                 </article>
                 <aside className="country__aside">
                     <Weather city={country.capital}/>
