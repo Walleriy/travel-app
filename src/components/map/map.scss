@@ -1,6 +1,7 @@
 .map {
   position: relative;
-  .map__FullScreenBtn {
+
+  &__FullScreenBtn {
     position: absolute;
     top: 74px;
     left: 10px;
@@ -13,7 +14,7 @@
     background: #FFFFFF;
   }
 
-  .map__container {
+  &__container {
     height: 60vh;
   }
 
@@ -24,5 +25,6 @@
   }
 }
 
-
-
+.leaflet-default-icon-path {
+  background-image: url(https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png);
+}

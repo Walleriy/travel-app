@@ -1,7 +1,8 @@
 import React from "react";
-import './map.scss'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css"
+import './map.scss'
+import "leaflet/dist/leaflet"
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import fullScreenBtn from './fullScreenBtn.png'
 
