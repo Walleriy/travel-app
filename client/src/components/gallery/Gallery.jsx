@@ -4,7 +4,7 @@ import { Card } from '../card/Card.jsx';
 import { useHttp } from '../../hooks/useHttp';
 import { Link } from 'react-router-dom';
 
-export const Gallery = ({ lang }) => {
+export const Gallery = ({ lang, term }) => {
   const [countries, setCountries] = useState([]);
   const { request, loading } = useHttp();
 
@@ -20,10 +20,24 @@ export const Gallery = ({ lang }) => {
     getData();
   }, [lang, request]);
 
+  console.log('term: ' + term);
+
+  const updateVisibleCountries = () => {
+    let filteredCountries;
+    if (term.length === 0) {
+      filteredCountries = countries;
+    } else {
+      filteredCountries = countries.filter(({ name }) => {
+        return name.toLowerCase().indexOf(term.toLowerCase()) > -1;
+      });
+    }
+    return filteredCountries;
+  };
+
   return (
     <div className="gallery">
       {!loading
-        ? countries.map((country) => (
+        ? updateVisibleCountries().map((country) => (
             <div className="container" key={country.id}>
               <Link to={`/${country.name}/${country.id}/${lang}`}>
                 <Card country={country} />

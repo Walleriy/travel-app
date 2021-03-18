@@ -33,7 +33,6 @@ export const CountryPage = () => {
       {!loading ? (
         <div>
           <CountryItem country={country} />
-          <div className="description">{country.description}</div>
           <Weather city={country.capital} />
           <Map coordinate={country.capitalLocation} />
           <SightGallery country={country} />

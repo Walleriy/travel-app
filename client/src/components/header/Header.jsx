@@ -16,7 +16,9 @@ export const Header = ({ lang, setLang }) => {
         <img src={logo} alt="logo" className="header__logo"></img>
       </Link>
       <h1 className="header__title">{t('header.h1')}</h1>
-      <Language lang={lang} setLang={setLang} />
+      <div className="header__select">
+        <Language lang={lang} setLang={setLang} />
+      </div>
     </header>
   );
 };

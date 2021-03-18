@@ -3,12 +3,10 @@
     display: flex;
     align-items: center;
     position: relative;
-    height: 20vh;
+    height: 12vh;
+    background-color: blue;
 
     &__logo {
-        position: absolute;
-        left: 10px;
-        top: 10px;
         height: 80px;
         width: 80px;
     }

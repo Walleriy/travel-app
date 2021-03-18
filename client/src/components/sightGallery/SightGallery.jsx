@@ -10,6 +10,8 @@ export const SightGallery = ({ country }) => {
   if (country.places) {
     const images = country.places.map((place) => ({
       original: place.photoUrl,
+      thumbnail: place.photoUrl,
+      description: place.description,
     }));
 
     return (

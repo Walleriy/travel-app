@@ -20,5 +20,9 @@
   "homepage": "https://github.com/Walleriy/travel-app#readme",
   "devDependencies": {
     "concurrently": "^6.0.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "materialize-css": "^1.0.0-rc.2"
   }
 }

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import cross from './cross.png';
 import './Search.scss';
 
-export const Search = (/*{ onSearchInput }*/) => {
+export const Search = ({ onSearchInput }) => {
   const [term, changeTerm] = useState('');
 
-  //useEffect(() => onSearchInput(term), [onSearchInput, term]);
+  useEffect(() => onSearchInput(term), [onSearchInput, term]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -31,9 +31,9 @@ export const Search = (/*{ onSearchInput }*/) => {
         />
       </form>
       <button
+        class="btn waves-effect waves-light yellow lighten-3"
         type="submit"
         form="search_panel"
-        className="search_panel__submit"
         onClick={(e) => {
           e.preventDefault();
         }}
@@ -43,3 +43,14 @@ export const Search = (/*{ onSearchInput }*/) => {
     </div>
   );
 };
+
+/* <button
+        type="submit"
+        form="search_panel"
+        className="search_panel__submit"
+        onClick={(e) => {
+          e.preventDefault();
+        }}
+      >
+        Search
+      </button> */
