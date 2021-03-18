@@ -7,6 +7,7 @@ import CountryItem from "../../components/country-item";
 import Weather from "../../components/weather";
 import Map from "../../components/map";
 import Date from "../../components/date";
+import Currency from "../../components/currency";
 
 const Country = ({name, countries}) => {
 
@@ -32,6 +33,7 @@ const Country = ({name, countries}) => {
                 <aside className="country__aside">
                     <Weather city={country.capital}/>
                     <Date timezone="Europe/Kiev"/>
+                    <Currency currency="EUR"/>
                 </aside>
             </div>
         )

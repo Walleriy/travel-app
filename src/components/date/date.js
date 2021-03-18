@@ -3,21 +3,19 @@ import './date.scss'
 
 const Date = ({ timezone }) => {
 
-    const [date, setDate] = useState('');
 
     const updateTime = () => {
 
         let today = new window.Date();
 
-        const localTime = today.toLocaleString('de-DE', { timeZone: timezone });
-
-        console.log(localTime);
-
-        setDate(localTime);
+        return today.toLocaleString('de-DE', { timeZone: timezone });
     }
 
+
+    const [date, setDate] = useState(updateTime());
+
     useEffect(() => {
-        const timer = setTimeout(() => updateTime(), 1000);
+        const timer = setTimeout(() => setDate(updateTime()), 1000);
         return () => clearTimeout(timer);
     })
 
