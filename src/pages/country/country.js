@@ -6,6 +6,7 @@ import VideoPlayer from "../../components/video-player";
 import CountryItem from "../../components/country-item";
 import Weather from "../../components/weather";
 import Map from "../../components/map";
+import Date from "../../components/date";
 
 const Country = ({name, countries}) => {
 
@@ -30,6 +31,7 @@ const Country = ({name, countries}) => {
                 </article>
                 <aside className="country__aside">
                     <Weather city={country.capital}/>
+                    <Date timezone="Europe/Kiev"/>
                 </aside>
             </div>
         )
