@@ -1,3 +1,28 @@
+.map {
+  position: relative;
+  .map__FullScreenBtn {
+    position: absolute;
+    top: 74px;
+    left: 10px;
+    z-index: 1000;
+  }
+
+  &__fullScreenImg {
+    width: 35px;
+    height: auto;
+    background: #FFFFFF;
+  }
+
+  .map__container {
+    height: 60vh;
+  }
+
+  .fullscreen-enabled {
+    .map__container {
+      height: 100vh;
+    }
+  }
+}
 
 
-.map {height: 60vh}
+
