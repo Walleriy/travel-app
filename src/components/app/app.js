@@ -17,6 +17,7 @@ const App = () => {
             coordinates: [50.45466, 30.5238],
             videoUrl: "https://youtu.be/WwV8_qMBZ3M",
             currency: "UAH",
+            timeZone: "Europe/Kiev",
             en: {
                 "capital": "Kiev",
                 "description": "Ukraine (Ukrainian: Україна, romanized: Ukrayina, pronounced [ʊkrɐˈjinɐ] (About this soundlisten); Russian: Украина, romanized: Ukraina pronounced [ʊkrɐˈinə]) is a country in Eastern Europe. It is bordered by Russia to the east and north-east;[c] Belarus to the north; Poland, Slovakia and Hungary to the west; and Romania, Moldova and the Black Sea to the south. Including Crimea, Ukraine has an area of 603,628 km2 (233,062 sq mi), and is the second-largest country in Europe after Russia. Excluding Crimea, Ukraine has a population of about 41.5 million, making it the eighth-most populous country in Europe. Its capital and largest city is Kyiv.",
@@ -64,6 +65,7 @@ const App = () => {
             coordinates: [55.75222, 37.61556],
             videoUrl: "https://youtu.be/YrNxPr4PKQo",
             currency: "RUB",
+            timeZone: "Europe/Moscow",
             en: {
                 "capital": "Moscow",
                 "description": "Russia (Russian: Россия, Rossiya, Russian pronunciation: [rɐˈsʲijə]), or the Russian Federation,[c] is a transcontinental country spanning Eastern Europe and Northern Asia. It is the largest country in the world; covering over 17,125,191 square kilometres (6,612,073 sq mi), consisting of more than one-eighth of the Earth's inhabited land area, extending to eleven time zones, and has bordering sixteen sovereign nations. Russia has a population of 146.7 million; and is the ninth-most populous country, as well as the most populous country in Europe. Moscow, the capital, is the largest city in Europe, while Saint Petersburg is the second-largest city and the country's cultural centre. Russians are the largest Slavic and European nation; speaking Russian, the most spoken Slavic language, and the most spoken native language in Europe.",
@@ -110,6 +112,7 @@ const App = () => {
             coordinates: [53.9, 27.56667],
             videoUrl: "https://youtu.be/vE9S-6DNM5k",
             currency: "BYN",
+            timeZone: "Europe/Minsk",
             en: {
                 "capital": "Minsk",
                 "description": "Belarus,[a] officially the Republic of Belarus,[b] is a landlocked country in Eastern Europe. It is bordered by Russia to the east and northeast, Ukraine to the south, Poland to the west, and Lithuania and Latvia to the northwest. Covering an area of 207,600 square kilometres (80,200 sq mi) and with a population of 9.4 million, Belarus is the thirteenth-largest and the twentieth-most populous country in Europe. The country is administratively divided into seven regions, and is one of the world's most urbanized, with over 40% of its total land area forested. Minsk is the country's capital and largest city.",
@@ -156,6 +159,7 @@ const App = () => {
             coordinates: [51.50853, -0.12574],
             videoUrl: "https://youtu.be/wSHXd-K-jIk",
             currency: "GBP",
+            timeZone: "Europe/London",
             en: {
                 "capital": "London",
                 "description": "England is a country that is part of the United Kingdom.[7][8][9] It shares land borders with Wales to its west and Scotland to its north. The Irish Sea lies northwest of England and the Celtic Sea to the southwest. England is separated from continental Europe by the North Sea to the east and the English Channel to the south. The country covers five-eighths of the island of Great Britain, which lies in the North Atlantic, and includes over 100 smaller islands, such as the Isles of Scilly and the Isle of Wight.",

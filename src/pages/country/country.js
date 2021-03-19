@@ -30,15 +30,15 @@ const Country = ({name, countries}) => {
     } else {
         return (<div className="country">
                 <article className="country__article">
-                    <CountryItem name={country.[currentLanguage].name} capital={country.[currentLanguage].capital} photoUrl={country.photoUrl}/>
-                    <div className="country__description">{country.[currentLanguage].description}</div>
+                    <CountryItem name={country[currentLanguage].name} capital={country[currentLanguage].capital} photoUrl={country.photoUrl}/>
+                    <div className="country__description">{country[currentLanguage].description}</div>
                     <MyGallery images={country.images}/>
                     <VideoPlayer url={country.videoUrl}/>
                     <Map coordinates={country.coordinates}/>
                 </article>
                 <aside className="country__aside">
                     <Weather city={country.capital}/>
-                    <Date timezone="Europe/Kiev"/>
+                    <Date timezone={country.timeZone}/>
                     <Currency currency={country.currency}/>
                 </aside>
             </div>
