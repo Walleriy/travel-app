@@ -8,8 +8,14 @@ import Weather from "../../components/weather";
 import Map from "../../components/map";
 import Date from "../../components/date";
 import Currency from "../../components/currency";
+import { useTranslation } from "react-i18next";
 
 const Country = ({name, countries}) => {
+
+    // eslint-disable-next-line
+    const {t, i18n} = useTranslation('translations');
+
+    const currentLanguage = i18n.language;
 
     const { pathname } = useLocation();
 
@@ -24,16 +30,16 @@ const Country = ({name, countries}) => {
     } else {
         return (<div className="country">
                 <article className="country__article">
-                    <CountryItem name={country.name} capital={country.capital} photoUrl={country.photoUrl}/>
-                    <div className="country__description">{country.description}</div>
+                    <CountryItem name={country.[currentLanguage].name} capital={country.[currentLanguage].capital} photoUrl={country.photoUrl}/>
+                    <div className="country__description">{country.[currentLanguage].description}</div>
                     <MyGallery images={country.images}/>
-                    <VideoPlayer url={'https://youtu.be/TBQurAxh2hA'}/>
-                    <Map coordinates={[50.496, 41.98]}/>
+                    <VideoPlayer url={country.videoUrl}/>
+                    <Map coordinates={country.coordinates}/>
                 </article>
                 <aside className="country__aside">
                     <Weather city={country.capital}/>
                     <Date timezone="Europe/Kiev"/>
-                    <Currency currency="EUR"/>
+                    <Currency currency={country.currency}/>
                 </aside>
             </div>
         )
